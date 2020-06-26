@@ -70,3 +70,17 @@ class GoodGuy():
                 print(f"{enemy.name} has {enemy.current_health} health left!")
 
         time.sleep(1)
+
+
+if __name__ == '__main__':
+    good_guy = GoodGuy('deacon')
+    bad_guy = BadGuy('devil')
+
+    while True:
+        good_guy.attack(bad_guy)
+        if bad_guy.current_health == 0:
+            print("You win!")
+            break
+        elif good_guy.current_health == 0:
+            print("You lose!")
+            break
